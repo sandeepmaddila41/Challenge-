@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pokémon Movies</title>
+</head>
+<body>
+    <h1>Pokémon Movies</h1>
+    <ul>
+    {% for index, movie in pokemon_movies|enumerate %}
+        <li><a href="{{ url_for('watch', index=index) }}">{{ movie.title }}</a></li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
